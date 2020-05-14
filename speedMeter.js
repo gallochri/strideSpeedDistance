@@ -10,7 +10,7 @@ const speedMeter = function (SensorPin){
     let speed = 0;
     let prevSpeed = 0;
 
-    gpio.setup(7, gpio.DIR_IN, gpio.EDGE_FALLING);
+    gpio.setup(7, gpio.DIR_IN, gpio.EDGE_FALLING);	// Pin used on raspberry pi for sensor
 
     gpio.on('change', function (channel, value) {
         let timeDelta = Date.now() - timePrev;
